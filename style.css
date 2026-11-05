@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 35px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+input {
+    padding: 12px;
+    margin: 5px;
+    width: 220px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    background: #4776e6;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2855b5;
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f1f5ff;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.progress-container {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.4s;
+}
+
+#progressText {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 18px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    input {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    li {
+        justify-content: flex-start;
+    }
+}
+small {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    color: #333;
+}
+.High {
+    background-color: #ffcccc;
+    color: red;
+}
+
+.Medium {
+    background-color: #ffe0b2;
+    color: #e67e00;
+}
+
+.Low {
+    background-color: #ccffcc;
+    color: green;
+}
+.container button {
+    display: inline-block;
+    margin: 5px;
+    white-space: nowrap;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+}
+.container {
+    overflow-x: auto;
+}
+.button-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+}
+
+.button-group button {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background-color: #444;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: white;
+}
+.overdue {
+    background-color: #ffcccc;
+    color: red;
+}
+
+.upcoming {
+    background-color: #ffe0b2;
+    color: #e67e00;
+}
+
+.done {
+    background-color: #ccffcc;
+    color: green;
+}
+.overdue {
+    color: red;
+    font-weight: bold;
+    background-color: #ffe5e5;
+}
+.dragging {
+    opacity: 0.5;
+    border: 2px dashed #888;
+}

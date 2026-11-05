@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>My To-Do List</h1>
+        <button id="themeToggle">🌙 Dark Mode</button>
+        <div class="task-stats">
+
+    <p id="taskCounter">Total Tasks: 0</p>
+
+    <p id="completedCounter">Completed: 0</p>
+
+    <p id="pendingCounter">Pending: 0</p>
+
+</div>
+        <div class="progress-container">
+    <div id="progressBar"></div>
+</div>
+
+<p id="progressText">0% Completed</p>
+
+        <input type="text" id="taskInput" placeholder="Enter your task">
+        <select id="taskPriority">
+    <option value="">select priority</option>        
+    <option value="Low">Low Priority</option>
+    <option value="Medium">Medium Priority</option>
+    <option value="High">High Priority</option>
+</select>
+<button id="sortPriority">Sort by Priority</button>
+<input type="date" id="taskDate">
+
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+
+<div class="button-group">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <button onclick="clearTasks()">Clear All</button>
+
+    <button id="allTasks">All Tasks</button>
+
+    <button id="completedTasks">Completed</button>
+
+    <button id="pendingTasks">Pending</button>
+    <button onclick="exportTasks()">Export tasks as CSV </button>
+    <input type="file" id="importFile" accept=".csv">
+
+<button onclick="importTasks()">
+    Import Tasks from CSV
+</button>
+
+</div>
+<ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
